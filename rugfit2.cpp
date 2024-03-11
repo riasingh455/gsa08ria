@@ -12,19 +12,20 @@ using namespace std;
 int main() {
     
     double width, length;
-    Rectangle rug(0,0); // will be updated below
+    //Rectangle rug(0,0); // will be updated below
 
     // create Rectangle named "floor" for sizes input by user
-    Rectangle floor(0,0);
     cout << "enter width and length of floor: ";
     cin >> width >> length;
     const Rectangle floor(width, length); // note: const object
 
     // RESET Rectangle NAMED "rug" FOR SIZES INPUT BY USER
     // (instead of the (0,0) used when it was created.
-    rug.getWidth();
-    rug.getLength();
     
+    cout << "enter width and length of rug: ";
+    cin >> width >> length;
+    Rectangle rug(width, length);
+
     // Change the two assignment statements for floorArea and rugArea
     // to use the area method for each of the floor and rug objects.
     double floorArea = floor.getArea();
